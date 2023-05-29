@@ -7,4 +7,4 @@ CTEST(gen_random_int, correct_input)
     int max = 55;
     int result = random_int(int min, int max);
     ASSERT_INTERVAL(min, max, result);
-} 
+}
