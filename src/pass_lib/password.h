@@ -5,7 +5,7 @@
 
 int random_int(int min, int max);
 char random_symbol(char* symbols, int num_symbols);
-void generate_password  (
+void generate_password (
         char* password,
         int length,
         int use_uppercase,
