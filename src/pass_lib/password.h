@@ -3,10 +3,11 @@
 #include <time.h>
 #include <ctype.h>
 
-
 int random_int(int min, int max);
-char random_symbol(char *symbols, int num_symbols);
-void generate_password(char *password, int length, int use_uppercase, int use_numbers, int use_special);
-
-
-
+char random_symbol(char* symbols, int num_symbols);
+void generate_password(
+        char* password,
+        int length,
+        int use_uppercase,
+        int use_numbers,
+        int use_special);
