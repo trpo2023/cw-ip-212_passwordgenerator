@@ -1,11 +1,6 @@
 
 #include <pass_lib/password.h>
 
-int random_int(int min, int max)
-       {
-    return rand() % (max - min + 1) + min;
-}
-
 char random_symbol(char* symbols, int num_symbols)
 {
     int index = rand() % num_symbols;
