@@ -1,7 +1,8 @@
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <ctype.h>
+
 
 int random_int(int min, int max);
 char random_symbol(char* symbols, int num_symbols);
