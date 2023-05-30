@@ -48,8 +48,7 @@ $(OBJ_DIR)/%.o: %.c
 test: $(TEST_PATH)
 
 $(TEST_PATH): $(TEST_OBJECTS) $(LIB_PATH)
-	$(CC) $(CFLAGS) $(CPPFLAGS) $^ -o $@ $(LDFLAGS) $(LDLIBS) 
-	
+	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS) $(LDLIBS)
 .PHONY: clean
 clean:
 	$(RM) $(APP_PATH) $(LIB_PATH) $(TEST_PATH)
