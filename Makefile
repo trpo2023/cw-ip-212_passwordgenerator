@@ -24,7 +24,7 @@ DEPS = $(APP_OBJECTS:.o=.d) $(LIB_OBJECTS:.o=.d) $(TEST_OBJECTS:.o=.d)
 all: $(APP_PATH)
 -include $(DEPS)
 $(APP_PATH): $(APP_OBJECTS) $(LIB_PATH)
- $(CC) $(CFLAGS) $(CPPFLAGS) $^ -o $@ $(LDFLAGS) $(LDLIBS)
+$(CC) $(CFLAGS) $(CPPFLAGS) $^ -o $@ $(LDFLAGS) $(LDLIBS)
 $(LIB_PATH): $(LIB_OBJECTS)
  ar rcs $@ $^
 $(OBJ_DIR)/%.o: %.c
