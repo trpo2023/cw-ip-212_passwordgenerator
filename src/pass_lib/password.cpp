@@ -1,7 +1,4 @@
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include <pass_lib/password.h>
 
 char random_upper_case()
 {
