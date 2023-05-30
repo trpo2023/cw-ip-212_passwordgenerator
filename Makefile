@@ -1,6 +1,7 @@
 APP_NAME = pass_use
 LIB_NAME = pass_lib
 TEST_NAME = pass_test
+
 CFLAGS = -Wall -Wextra -Werror
 CPPFLAGS = -I src -I thirdparty -MP -MMD
 LDFLAGS =
