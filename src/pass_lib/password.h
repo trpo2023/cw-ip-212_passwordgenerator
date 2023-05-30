@@ -25,44 +25,38 @@ char random_symbol()
     return symbols[index];
 }
 
-void generate_password(char *password, int length, int use_upper_case, int use_digits, int use_symbols)
+void generate_password(
+        char* password,
+        int length,
+        int use_upper_case,
+        int use_digits,
+        int use_symbols)
 {
     int i;
-    for (i = 0; i < length; i++)
-    {
+    for (i = 0; i < length; i++) {
         int type = rand() % 4;
-        switch (type)
-        {
+        switch (type) {
         case 0:
             password[i] = random_lower_case();
             break;
         case 1:
-            if (use_upper_case)
-            {
+            if (use_upper_case) {
                 password[i] = random_upper_case();
-            }
-            else
-            {
+            } else {
                 i--;
             }
             break;
         case 2:
-            if (use_digits)
-            {
+            if (use_digits) {
                 password[i] = random_digit();
-            }
-            else
-            {
+            } else {
                 i--;
             }
             break;
         case 3:
-            if (use_symbols)
-            {
+            if (use_symbols) {
                 password[i] = random_symbol();
-            }
-            else
-            {
+            } else {
                 i--;
             }
         }
