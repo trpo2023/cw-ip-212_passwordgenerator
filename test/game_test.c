@@ -1,5 +1,5 @@
-#include <string.h>
 #include <ctest.h>
+#include <string.h>
 
 #include <pass_lib/password.h>
 
@@ -51,7 +51,8 @@ CTEST(generate_password, length_zero)
     char password[1];
 
     // Act
-    generate_password(password, length, use_upper_case, use_digits, use_symbols);
+    generate_password(
+            password, length, use_upper_case, use_digits, use_symbols);
 
     // Assert
     ASSERT_EQUAL('\0', password[0]);
@@ -68,7 +69,8 @@ CTEST(generate_password, length_positive)
     char password[length + 1];
 
     // Act
-    generate_password(password, length, use_upper_case, use_digits, use_symbols);
+    generate_password(
+            password, length, use_upper_case, use_digits, use_symbols);
 
     // Assert
     ASSERT_TRUE(strlen(password) == length);
@@ -85,10 +87,13 @@ CTEST(generate_password, no_upper_case)
     char password[length + 1];
 
     // Act
-    generate_password(password, length, use_upper_case, use_digits, use_symbols);
+    generate_password(
+            password, length, use_upper_case, use_digits, use_symbols);
 
     // Assert
     for (int i = 0; i < length; i++) {
-        ASSERT_TRUE(islower(password[i]) || isdigit(password[i]) || ispunct(password[i]));
+        ASSERT_TRUE(
+                islower(password[i]) || isdigit(password[i])
+                || ispunct(password[i]));
     }
 }
